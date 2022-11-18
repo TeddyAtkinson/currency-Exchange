@@ -31,7 +31,8 @@
     "webpack-dev-server": "3.11.3"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "sweetalert": "^2.1.2"
   },
   "description": ""
 }

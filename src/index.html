@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Currency Convert</title>
 </head>
+
 <body>
   <div class="container">
     <div class="jumbotron">
-      <div>
-
-      </div>
+      <form id="form">
+        <label>
+          USD Input: <br>
+          <input type="text" name="userSearchInfo" id="dollarInput">
+        </label> <br>
+        <label>
+          Choose Currency to Convert to:<br>
+          <input type="text" name="userSearchInfo" id="convCurrency">
+        </label>
+        <br>
+        <button type="submit" id="button">Calculate!</button>
+      </form>
     </div>
   </div>
   <hr>
   <div class="container">
-    <div id="conversionDisplay">
-
+    <div >
+      <h2 id="conversionDisplay"></h2>
     </div>
   </div>
 </body>
+
 </html>
