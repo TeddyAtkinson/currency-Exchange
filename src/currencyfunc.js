@@ -1,4 +1,3 @@
-import swal from 'sweetalert';
 import { UserSearch } from "./apiservice.js";
 
 export async function display(event) {
@@ -10,12 +9,7 @@ export async function display(event) {
   const dataRequest = await newSearch.getData();
 
   if (dataRequest.result === "error") {
-    swal({
-      title: "ERROR:",
-      text: "CURRENCY CONVERSION NOT SUPPORTED",
-      icon: "error",
-      button: "OK",
-    });
+    document.getElementById("conversionDisplay").innerHTML = null;
   } else {
     const conversionOutput = dataRequest.conversion_result;
     let currencydisplay = document.getElementById("conversionDisplay");
