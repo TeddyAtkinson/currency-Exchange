@@ -4,8 +4,9 @@ export async function display(event) {
   event.preventDefault();
   document.getElementById("conversionDisplay").innerHTML = null;
   const dollarInput = document.getElementById("dollarInput").value;
+  const startingCurrency = document.getElementById("startingCurrency").value;
   const convCurrency = document.getElementById("convCurrency").value;
-  const newSearch = new UserSearch(dollarInput, convCurrency);
+  const newSearch = new UserSearch(dollarInput, startingCurrency, convCurrency);
   const dataRequest = await newSearch.getData();
 
   if (dataRequest.result === "error") {
