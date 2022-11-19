@@ -3,14 +3,13 @@ import swal from 'sweetalert';
 export class UserSearch{
   constructor(dollarInput,convCurrency){
     this.dollarInput = parseInt(dollarInput);
-    this.startingCurrency = startingCurrency;
     this.convCurrency = convCurrency;
   }
 
   async getData() {
     return new Promise((resolve, reject) => {
       const request = new XMLHttpRequest();
-      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${this.startingCurrency}/${this.convCurrency}/${this.dollarInput}`;
+      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${this.convCurrency}/${this.dollarInput}`;
       request.addEventListener("loadend", () => {
         if (request.status === 200) {
           const data = JSON.parse(request.responseText);
